@@ -1,0 +1,168 @@
+/*
+ * Copyright (c) 2014-2016, b3log.org & hacpai.com
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ * themes for side
+ *
+ * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
+ * @version 0.1.0.0, Dec 6, 2015
+ */
+/* start side */
+.side {
+    width: 20%;
+    position: absolute;
+    height: 100%;
+    z-index: 8;
+    flex-flow: column;
+    display: flex;
+}
+
+.side-max {
+    width: 100%;
+    z-index: 11;
+}
+/* end side */
+
+/* start side right */
+.side-right .tabs-panel > div {
+    overflow: auto;
+}
+
+.side-right {
+    flex-flow: column;
+}
+
+#outline .ico {
+    margin: 1px 5px 0 5px;
+}
+
+.ico-func {
+    background-position: -123px -21px;
+}
+
+.ico-interface {
+    background-position: -143px -21px;
+}
+
+.ico-const {
+    background-position: -103px -21px;
+}
+
+.ico-var {
+    background-position: -63px -21px;
+}
+
+.ico-struct {
+    background-position: -83px -21px;
+}
+
+.ico-type {
+    background-position: -163px -21px;
+}
+
+.ico-package {
+    background-position: -183px -21px;
+}
+/* end side right */
+
+/* start tree */
+.ztree {
+    width: 100%;
+    padding: 0;
+    outline: 0px;
+    border: 0px;
+}
+
+.ztree li a.curSelectedNode {
+    background-color: #3875d7;
+    border-width: 0;
+    color: #fff;
+    height: 18px;
+    opacity: 1;
+}
+
+.ztree li a:hover {
+    text-decoration: none;
+}
+
+.ztree li > a > span.button,
+.ztree li > a > span.button.ico-ztree-dir,
+.ztree li > a > span.button.ico-ztree-dir-api,
+.ztree li > a > span.button.ico-ztree-dir-workspace {
+    margin-right: 2px;
+}
+
+.ztree li > a > span.button {
+    background-image: url("../images/ico-file.png");
+    margin-right: 0;
+}
+
+.ico-ztree-dir {
+    background-position: -2px -23px;
+}
+
+.ico-ztree-dir-api {
+    background-position: -22px -23px;
+}
+
+.ico-ztree-dir-workspace {
+    background-position: -42px -23px;
+}
+
+.ico-ztree-html {
+    background-position: -4px -2px;
+}
+
+.ico-ztree-go {
+    background-position: -22px -2px;
+}
+
+.ico-ztree-css {
+    background-position: -42px -2px;
+}
+
+.ico-ztree-img {
+    background-position: -63px -2px;
+}
+
+.ico-ztree-other {
+    background-position: -83px -2px;
+}
+
+.ico-ztree-text {
+    background-position: -103px -2px;
+}
+
+.ico-ztree-sql {
+    background-position: -123px -2px;
+}
+
+.ico-ztree-pro {
+    background-position: -142px -2px;
+}
+
+.ico-ztree-md {
+    background-position: -162px -2px;
+}
+
+.ico-ztree-js {
+    background-position: -182px -2px;
+}
+
+.ico-ztree-xml {
+    background-position: -202px -2px;
+}
+/* end tree */
