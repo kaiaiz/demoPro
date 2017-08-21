@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>demo8</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%；
+        }
+
+        body {
+            position: relative;
+        }
+
+        div.box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 30%;
+        }
+
+    </style>
+    <script>
+        //dom一级事件
+        /*window.onload=function(){
+          let box=document.querySelector('div.box');
+          box.onmousedown=function(event){
+            let eventX=event.offsetX;
+            let eventY=event.offsetY;
+            document.onmousemove=function(event){//鼠标按下且移动时才开始，为解决拖拽卡顿的问题，将事件添加到document上
+              let moveX=event.clientX;
+              let moveY=event.clientY;
+              box.style.left=`${moveX-eventX}px`;
+              box.style.top=`${moveY-eventY}px`;
+            }
+          }
+          box.onmouseup=function(){
+            document.onmousemove=null;
+          }
+        }*/
+        //dom二级事件
+        /*handle=function(){
+          let box=document.querySelector('div.box');
+          let boxM;
+          function boxDown(event){
+              let eventX=event.clientX;
+              let eventY=event.clientY;
+              let boxM=boxMove;
+              alert(boxM);
+            function boxMove(event){
+              let moveX=event.clientX;
+              let moveY=event.clientY;
+              box.style.left=`${moveX-eventX}px`;
+              box.style.top=`${moveY-eventY}px`;
+            }
+            document.addEventListener('mousemove',boxMove);
+          }
+          box.addEventListener('mousedown',boxDown);
+         function boxUp(){
+            document.removeEventListener('mousemove',boxMove);
+         }
+         box.addEventListener('mouseup',boxUp);
+        }
+        window.addEventListener("load",handle);*/
+
+    </script>
+    <script>
+        function handle() {
+            function Sticky() {
+                let box = this;
+            }
+            let scktiy = new Sticky();
+            class drag{
+                construct(obj){
+                    this.obj=obj;//将传入的对象作为当前对象的一个属性，由于其他方法也要调用，所以需为属性
+                }
+                start(){
+                    this.move();
+                }
+                move(){
+                    //that=this
+                    this.obj.onmousedown=function(e){
+                        let eventX=e.offsetX;//只在此方法内调用，变量即可
+                        let eventY=e.offsetY;//只在此方法内调用，变量即可
+                        this.obj.onmousemove
+                        this.onmousemove=function(){}//this表示this.obj，调用的对象发生改变
+                    }
+                }
+            }
+            let drag=new Drag(box);//传入对象
+            drag.start();//打包成新的对象。
+        }
+        window.addEventListener('load', handle);
+
+    </script>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
